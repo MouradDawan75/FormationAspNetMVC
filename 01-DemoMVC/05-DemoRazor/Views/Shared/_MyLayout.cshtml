@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    
+    @Styles.Render("~/Content/bootstrap.css")
+</head>
+<body>
+    <div class="container">
+        @Html.Partial("_Navbar")
+        <div>
+            @RenderSection("mySection", required: false)
+            @RenderSection("sousMenu", required: false)
+            @RenderBody()
+        </div>
+
+        @if (IsSectionDefined("footer"))
+        {
+            @RenderSection("footer", required: false)
+        }
+        else
+        {
+            @Html.Partial("_Footer")
+        }
+
+
+    </div>
+</body>
+</html>

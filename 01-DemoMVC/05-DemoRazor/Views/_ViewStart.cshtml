@@ -1,0 +1,14 @@
+﻿@{
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    if (ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString().StartsWith("Home"))
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_MyLayout.cshtml";
+    }
+
+    //ordre d'affichage des vues Razor:
+    //_ViewStart --- Vue à afficher ----- Layout
+}

@@ -1,0 +1,150 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+   // Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+@{ 
+    /*
+    Moteur de template .net: aspx, Spark Nhtaml
+    Razor est le moteur de templates le plus récent.
+    Ce sont des fichiers (.cshtml, .vbhtml) contenant du HTML et des expressions pour inclure des données.
+    Vue Razor: Template + Data
+
+        */
+    var v1 = 10;
+    int n = 100;
+    double d = 10.05;
+
+    //Pour insérer du texte dans la zone c#: 2 syntaxes
+    @:ceci est du texte
+
+    <text>
+        Autre texte dans une zone c#
+    </text>
+
+}
+
+<br/>
+@section mySection {
+    contenu de la section
+    
+    }
+
+La valeur de d = @d
+
+@*ceci est un commentaire Razor*@
+<h3>Afficher le @@:</h3>
+<p>
+    Mon émail est: test@gmail.com
+</p>
+@{
+
+
+@:test@gmail.com
+
+
+@:test@@gmail.com
+
+    string[] clients = { "dawan", "jehann" };
+
+    var mesApps = new Dictionary<string, string>();
+    mesApps.Add("app1", "ASP.NET");
+    mesApps.Add("app2", "Java");
+    mesApps.Add("app3", "Android");
+
+}
+<br/>
+<h3>Tableau</h3>
+@clients[0] est un client
+
+<br/>
+<h3>Dictionnaire</h3>
+<br/>
+<p>La seconde application dans le dictionnaire: @mesApps["app2"]</p>
+
+<br/>
+<h3>Boucle FOR:</h3>
+<br/>
+
+<table>
+    @for (int i = 1; i < 10; i++)
+    {
+        <tr>
+            <td>10</td>
+            <td>*</td>
+            <td>@i</td>
+            <td>=</td>
+            <td>@(10*i)</td>
+        </tr>
+    }
+</table>
+<br/>
+<h3>Boucle FOREACH:</h3>
+<br/>
+
+@foreach (var item in clients)
+{
+    <p>@item</p>
+}
+<br/>
+<h3>Condition IF/ELSE:</h3>
+<br/>
+@{ 
+    var jour = false;
+    var time = DateTime.Now;
+if (jour)
+            {
+                @DateTime.Now
+}
+else
+            {
+                @:Pas de date disponible
+            }
+}
+<br/>
+<h3>Switch/Case</h3>
+<br/>
+@{ 
+    var civilite = "M";
+    var message = "";
+    switch (civilite)
+    {
+        case "M":
+            message = "Bonjour Monsieur";
+            break;
+
+        case "F":
+            message = "Bonjour Madame";
+            break;
+
+        default:
+            message = "inconnu";
+            break;
+    }
+}
+
+<p>@message</p>
+<br/>
+<h3>Exception</h3>
+<br/>
+@{ 
+    int a = 5, b = 0;
+    try
+    {
+        int c = a / b;
+    }
+    catch (Exception ex)
+    {
+        <p>Message de l'exception: @ex.Message</p>
+    }
+}
+<br/>
+Affichage de la vue partielle: _Table <br/>
+@Html.Partial("_Table")
+<br/>
+
+@section footer{
+    
+    My Footer
+    
+    }

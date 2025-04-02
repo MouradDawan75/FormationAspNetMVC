@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-ActionFilters", "03-Acti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-Routage", "04-Routage\04-Routage.csproj", "{368320E1-B691-4ADA-9D63-1E78A6D0B35E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-DemoRazor", "05-DemoRazor\05-DemoRazor.csproj", "{A1525C1A-2017-4C89-9115-AED0B0F5570D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{368320E1-B691-4ADA-9D63-1E78A6D0B35E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{368320E1-B691-4ADA-9D63-1E78A6D0B35E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{368320E1-B691-4ADA-9D63-1E78A6D0B35E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1525C1A-2017-4C89-9115-AED0B0F5570D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1525C1A-2017-4C89-9115-AED0B0F5570D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1525C1A-2017-4C89-9115-AED0B0F5570D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1525C1A-2017-4C89-9115-AED0B0F5570D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
