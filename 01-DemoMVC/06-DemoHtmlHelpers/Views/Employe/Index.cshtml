@@ -1,0 +1,43 @@
+﻿@model _06_DemoHtmlHelpers.Models.Employe
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Employé</h2>
+<br />
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(e => e.Id, "Id: ")
+    @Html.TextBoxFor(e => e.Id)
+    <br />
+
+    @Html.LabelFor(e => e.Nom, "Nom: ")
+    @Html.TextBoxFor(e => e.Nom)
+    <br />
+
+    @Html.LabelFor(e => e.Salaire, "Salaire: ")
+    @Html.TextBoxFor(e => e.Salaire)
+    <br />
+
+    @Html.Label("Département: ")
+    @Html.DropDownListFor(e => e.DepartementId, TempData["DepartementId"] as SelectList)
+    <br />
+
+    @Html.Label("Date entrée: ")
+    @Html.TextBoxFor(e => e.DateEntree)
+    <br />
+
+    @Html.Label("Est actif: ")
+    @Html.CheckBoxFor(e => e.isActif)
+    <br />
+    @Html.Label("Type: ")
+    @Html.EnumDropDownListFor(e => e.EmployeType)
+
+    <br />
+
+    <input type="submit" value="Envoyer" />
+
+}
+
+

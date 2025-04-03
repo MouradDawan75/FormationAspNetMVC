@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-DemoMVC", "01-DemoMVC\01-DemoMVC.csproj", "{E218C422-7759-4EE3-9C34-3F8BB6242F4C}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-Routage", "04-Routage\04-Routage.csproj", "{368320E1-B691-4ADA-9D63-1E78A6D0B35E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-DemoRazor", "05-DemoRazor\05-DemoRazor.csproj", "{A1525C1A-2017-4C89-9115-AED0B0F5570D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-DemoHtmlHelpers", "06-DemoHtmlHelpers\06-DemoHtmlHelpers.csproj", "{A8C26D20-3A7B-4696-A0D3-D176655BD7C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{A1525C1A-2017-4C89-9115-AED0B0F5570D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1525C1A-2017-4C89-9115-AED0B0F5570D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1525C1A-2017-4C89-9115-AED0B0F5570D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8C26D20-3A7B-4696-A0D3-D176655BD7C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8C26D20-3A7B-4696-A0D3-D176655BD7C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8C26D20-3A7B-4696-A0D3-D176655BD7C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8C26D20-3A7B-4696-A0D3-D176655BD7C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

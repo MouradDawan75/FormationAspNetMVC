@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    //StreamReader reader = new StreamReader("");
+
+    //reader.Close();
+
+    //using (StreamReader reader1 = new StreamReader(""))
+    //{
+    //    //reader1.Close(); non nécessaire -> car le using libère la ressource à la fin du bloc using
+    //}
+
+}
+
+<a href="/Home/AboutUs?Id1=5&Name=dawan" target="_blank">About Us</a>
+@Html.ActionLink("About Us", "AboutUs", "Home", new { Id1 = 5, Name = "dawan" }, new { target = "_blank" })
+<br />
+@*
+    <form action="/" method="post">
+        <input type="text" name="demo"/>
+    </form>
+*@
+
+@*si aucun nom d'action ni de controller n'est spécifié dans BeginForm -> elle pointe implicitement vers
+    l'action Index de HomeController
+*@
+
+@using (Html.BeginForm("Bonjour", "Home", FormMethod.Post))
+{
+    @Html.Label("nom", "Nom: ")
+    <br />
+    @Html.TextBox("nom", null, new { @class = "form-control" })
+    <br />
+    @Html.Label("prenom", "Prénom: ")
+    <br />
+    @Html.TextBox("prenom", null, new { @class = "form-control" })
+    <br />
+    @:Poste: <br />
+    @Html.RadioButton("Poste", "Developpeur", new { id = "Dev" })
+    @Html.Label("Dev", "Developpeur")
+
+    @Html.RadioButton("Poste", "Developpeur", new { id = "Cons" })
+    @Html.Label("Cons", "Consultant")
+
+    @Html.RadioButton("Poste", "Developpeur", new { id = "Man" })
+    @Html.Label("Man", "Manager")
+    <br/>
+
+    @:Formations: <br/>
+    @Html.DropDownList("formations")
+    <br/>
+    @:Centres: <br/>
+    @Html.DropDownList("centres", null, new {size = 3})
+    <br/>
+
+    <input type="submit" value="Envoyer"/>
+}

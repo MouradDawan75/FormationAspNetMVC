@@ -1,0 +1,57 @@
+﻿@model _06_DemoHtmlHelpers.Models.Salarie
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Formulaire Salarié</h2>
+<br/>
+<br/>
+
+
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new {enctype = "multipart/form-data"}))
+{
+    @*@Html.EditorFor(s => s)*@
+    @Html.AntiForgeryToken()
+
+<fieldset>
+    @Html.Label("User Name: ")
+    @Html.EditorFor(s => s.UserName)
+    @Html.ValidationMessage("UserName", new { @class = "text-danger" })
+    <br />
+
+    @Html.Label("Password: ")
+    @Html.EditorFor(s => s.Password)
+    @Html.ValidationMessage("UPassword", new { @class = "text-danger" })
+    <br />
+    @Html.Label("Date entrée: ")
+    @Html.EditorFor(s => s.DateEntree)
+    @Html.ValidationMessage("DateEntree", new { @class = "text-danger" })
+    <br />
+
+    @Html.Label("Email: ")
+    @Html.EditorFor(s => s.Email)
+    @Html.ValidationMessage("Email", new { @class = "text-danger" })
+    <br />
+
+    @Html.Label("Commentaire: ")
+    @Html.EditorFor(s => s.Commentaire)
+    @Html.ValidationMessage("Commentaire", new { @class = "text-danger" })
+
+    <br />
+    @Html.Label("Evauation: ")
+    @Html.EditorFor(s => s.Evaluation)
+    @Html.ValidationMessage("Evaluation", new { @class = "text-danger" })
+
+    <br/>
+    @Html.Label("Photo")
+    <input type="file" name="photo"/>
+
+    <br/>
+    <input type="submit" value="Envoyer" class="btn btn-primary"/>
+
+
+</fieldset>
+
+}
+
