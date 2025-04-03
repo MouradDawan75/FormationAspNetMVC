@@ -1,0 +1,14 @@
+﻿@helper CurrentTime()
+    {
+        <div>
+            Il est actuelment: @DateTime.Now.ToLongTimeString()
+        </div>
+    }
+
+
+@helper Somme(int a, int b) 
+
+    {
+    var somme = a + b;
+    <b>@somme</b>
+    }

@@ -43,14 +43,27 @@
 
     @Html.RadioButton("Poste", "Developpeur", new { id = "Man" })
     @Html.Label("Man", "Manager")
-    <br/>
+    <br />
 
-    @:Formations: <br/>
+    @:Formations: <br />
     @Html.DropDownList("formations")
-    <br/>
-    @:Centres: <br/>
-    @Html.DropDownList("centres", null, new {size = 3})
-    <br/>
+    <br />
+    @:Centres: <br />
+    @Html.DropDownList("centres", null, new { size = 3 })
+    <br />
 
-    <input type="submit" value="Envoyer"/>
+    <input type="submit" value="Envoyer" />
 }
+
+<br />
+<br />
+Possibilité de définir ses propres helpers. Ajoutez le dossier asp.net App_Code via le menu:
+<br />
+clic droit -> ajouter -> ajouter le dossier asp.net -> choisir App_Code.
+<br />
+Définir ses helpers dans une vue partielle.
+<br />
+<br/>
+<p>Il est: @MyHelpers.CurrentTime()</p>
+<br/>
+La somme de 15 et 12 est: @MyHelpers.Somme(15,12)

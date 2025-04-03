@@ -7,7 +7,7 @@
 <br/>
 <br/>
 
-
+<div class="text-danger">@ViewBag.Photo</div>
 
 @using (Html.BeginForm("Index", "Salarie", FormMethod.Post, new {enctype = "multipart/form-data"}))
 {
@@ -46,6 +46,8 @@
     <br/>
     @Html.Label("Photo")
     <input type="file" name="photo"/>
+    <br/>
+    @ViewBag.Extension
 
     <br/>
     <input type="submit" value="Envoyer" class="btn btn-primary"/>
@@ -54,4 +56,5 @@
 </fieldset>
 
 }
+
 
