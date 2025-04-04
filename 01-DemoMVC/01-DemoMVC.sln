@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-DemoHtmlHelpers", "06-De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07-AuthentificationAutorisation", "07-AuthentificationAutorisation\07-AuthentificationAutorisation.csproj", "{F3CFF701-1544-4BD8-BEFE-CD75B367D27D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExoMVC", "ExoMVC\ExoMVC.csproj", "{426C0955-769A-4994-A490-04A6DEE264A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{F3CFF701-1544-4BD8-BEFE-CD75B367D27D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3CFF701-1544-4BD8-BEFE-CD75B367D27D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3CFF701-1544-4BD8-BEFE-CD75B367D27D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{426C0955-769A-4994-A490-04A6DEE264A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{426C0955-769A-4994-A490-04A6DEE264A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{426C0955-769A-4994-A490-04A6DEE264A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{426C0955-769A-4994-A490-04A6DEE264A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
