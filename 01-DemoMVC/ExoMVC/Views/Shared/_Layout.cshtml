@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@{
+    ExoMVC.Services.ProductCategoryService service = new ExoMVC.Services.ProductCategoryService();
+    List<ExoMVC.Models.ProductCategory> lst = service.GetAll();
+}
+<!DOCTYPE html>
+
 
 <html>
 <head>
@@ -10,23 +15,51 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">ASP.NET MVC</a>
+                <a class="navbar-brand" href="/Home/Index">ASP.NET MVC</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" aria-current="page" href="/ProductCategory/Index">Category Managment</a>
-                        </li>
+                        @if (Session["admin"] != null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" aria-current="page" href="/ProductCategory/Index">Category Managment</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" aria-current="page" href="/Product/Index">Product Managment</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" aria-current="page" href="/Product/Index">Product Managment</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" aria-current="page" href="/User/Index">User Managment</a>
+                            </li>
+                        }
+
+
+                        @if (Session["user"] != null)
+                        {
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" aria-current="page" href="/Login/Logout">Logout</a>
+                            </li>
+
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" aria-current="page" href="/Login/Index">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" aria-current="page" href="/Login/Create">Create Account</a>
+                            </li>
+                        }
+
 
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <form action="/Home/Index" class="d-flex" role="search" method="get">
+                        @Html.DropDownList("Category", new SelectList(lst, "Name", "Name"), "--Select--", new { @class = "form-control" })
+
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>

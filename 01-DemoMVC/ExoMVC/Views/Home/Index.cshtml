@@ -1,8 +1,54 @@
-﻿
+﻿@model ExoMVC.Dtos.ProductsCategoriesDto
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div class="container">
+    <h2>Products List</h2>
+    <br />
 
-<h2>Index</h2>
+    <div class="row">
+
+        <div class="col-md-2">
+
+            <div class="list-group">
+                @Html.ActionLink("All","Index", null, new {@class = Request["Category"] == null ? "list-group-item active" : "list-group-item" })
+                @foreach (var item in Model.Categories)
+                {
+                    @Html.ActionLink(item.Name, "Index", new {Category = item.Name}, new { @class = Request["Category"] == item.Name ? "list-group-item active" : "list-group-item" })
+                }
+            </div>
+
+        </div>
+
+        <div class="col-md-10">
+            <div class="row">
+                @foreach (var item in Model.Products)
+                {
+                    <div class="col-md-3" style="height:280px; padding:10px;margin:10px;border:solid">
+                        <div class="col-md-12" align="center">
+                            <img src="~/Content/productImages/@item.Image" style="height: 150px" />
+                        </div>
+                        <div class="col-md-12">
+                            <b>@Html.ActionLink(item.Name, "Details", "Home", new { id = item.Id })</b>
+                        </div>
+
+                        <div class="col-md-12">
+                            <p>@item.Price €</p>
+                            <p align="center"><a href="/Achat/Add/@item.Id" class="btn btn-danger">Add to Cart</a></p>
+                        </div>
+                    </div>
+                }
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
 
